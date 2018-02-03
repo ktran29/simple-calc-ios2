@@ -197,6 +197,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXT-5Y-Ajn">
                                         <rect key="frame" x="0.0" y="528" width="325" height="69"/>
                                         <state key="normal" title="History"/>
+                                        <connections>
+                                            <segue destination="0oL-HP-Puq" kind="show" id="MZe-YN-ezm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -216,7 +219,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="89" y="125"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="013-og-Qu2">
+            <objects>
+                <viewController id="0oL-HP-Puq" customClass="HistoryViewController" customModule="simplecalcios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5g3-d6-rhj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acU-fT-z30">
+                                <rect key="frame" x="316" y="612" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="6yW-wI-Cmt"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scm-jZ-uml">
+                                <rect key="frame" x="25" y="20" width="325" height="128"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="scm-jZ-uml" firstAttribute="leading" secondItem="IZR-zC-uhQ" secondAttribute="leading" constant="25" id="aXJ-73-Ixz"/>
+                            <constraint firstItem="IZR-zC-uhQ" firstAttribute="trailing" secondItem="scm-jZ-uml" secondAttribute="trailing" constant="25" id="arV-kn-u4O"/>
+                            <constraint firstItem="IZR-zC-uhQ" firstAttribute="trailing" secondItem="acU-fT-z30" secondAttribute="trailing" constant="25" id="myb-g5-pcs"/>
+                            <constraint firstItem="scm-jZ-uml" firstAttribute="top" secondItem="IZR-zC-uhQ" secondAttribute="top" constant="25" id="onf-nf-1Gl"/>
+                            <constraint firstItem="IZR-zC-uhQ" firstAttribute="bottom" secondItem="acU-fT-z30" secondAttribute="bottom" constant="25" id="vFf-2L-uAL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IZR-zC-uhQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="scm-jZ-uml" id="9ej-Md-tzf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bF0-11-hmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="-16"/>
         </scene>
     </scenes>
 </document>
